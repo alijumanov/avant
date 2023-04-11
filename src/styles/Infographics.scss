@@ -1,0 +1,127 @@
+// colors //
+
+$dark: #000000;
+$text: #898686;
+$light: #FFFFFF;
+$danger: #FF103B;
+$silver: #AAAAAA;
+$secondary: #393743;
+
+// fonts //
+
+$ptserif: 'PT Serif', serif;
+$inter: 'Inter', sans-serif;
+$open: 'Open Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$times: 'Times New Roman', Times, serif;
+$jakarta: 'Plus Jakarta Sans', sans-serif;
+
+.Infographics {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            color: $danger;
+            padding-right: 40%;
+
+            @media (max-width:767px) {
+                padding: 0;
+            }
+
+            span {
+                color: $dark;
+            }
+        }
+
+        .infos {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+
+            @media (max-width:767px) {
+                gap: 4vw;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .info {
+                padding: 2vw;
+                display: flex;
+                position: relative;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                &::before {
+                    left: 0;
+                    width: 1px;
+                    height: 65%;
+                    content: "";
+                    opacity: 0.8;
+                    position: absolute;
+                    background-color: $danger;
+                }
+
+                &:nth-child(2) {
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.13);
+                    background: linear-gradient(180deg, #FF103B 0%, #AB102C 100%);
+
+                    .min-title,
+                    .big-text,
+                    .text {
+                        color: $light;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+
+                @media (max-width:767px) {
+                    padding: 4vw;
+
+                    &::after {
+                        right: 0;
+                        width: 1px;
+                        height: 65%;
+                        content: "";
+                        opacity: 0.8;
+                        position: absolute;
+                        background-color: $danger;
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+
+                .min-title {
+                    color: $danger;
+                    font-weight: 600;
+                    text-align: center;
+                    font-family: $mont;
+                }
+
+                .big-text {
+                    color: $dark;
+                    font-weight: 500;
+                    text-align: center;
+                    font-family: $inter;
+                }
+
+                .text {
+                    color: $text;
+                    font-weight: 400;
+                    text-align: center;
+                    font-family: $mont;
+                }
+            }
+        }
+    }
+}

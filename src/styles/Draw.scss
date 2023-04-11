@@ -1,0 +1,88 @@
+// colors //
+
+$dark: #000000;
+$text: #898686;
+$light: #FFFFFF;
+$danger: #FF103B;
+$silver: #AAAAAA;
+$secondary: #393743;
+
+// fonts //
+
+$ptserif: 'PT Serif', serif;
+$inter: 'Inter', sans-serif;
+$open: 'Open Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$times: 'Times New Roman', Times, serif;
+$jakarta: 'Plus Jakarta Sans', sans-serif;
+
+.Draw {
+    .decor {
+        right: 1vw;
+        width: auto;
+        height: 40vw;
+        bottom: -25vw;
+        position: absolute;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+
+    .wrapper {
+        gap: 7vw;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 2fr);
+
+        @media (max-width:767px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .title {
+                color: $danger;
+
+                span {
+                    color: $dark;
+                }
+            }
+
+            .big-text {
+                font-weight: 400;
+                color: $secondary;
+                font-family: $ptserif;
+            }
+
+            .explore {
+                color: $light;
+                padding: 0.8vw 2vw;
+                text-decoration: none;
+                background: linear-gradient(125.03deg, #FF0E37 0%, #C80F0F 100%);
+                @media (max-width:767px) {
+                    padding: 2vw 4vw;
+                }
+            }
+        }
+
+        .right {
+            width: 100%;
+
+            .img {
+                height: auto;
+                max-width: 100%;
+                min-width: 100%;
+                filter: drop-shadow(30px 20px 15px $secondary);
+                -webkit-filter: drop-shadow(30px 20px 15px $secondary);
+            }
+        }
+    }
+}

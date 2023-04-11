@@ -1,0 +1,181 @@
+// colors //
+
+$dark: #000000;
+$text: #898686;
+$light: #FFFFFF;
+$danger: #FF103B;
+$silver: #AAAAAA;
+$secondary: #393743;
+
+// fonts //
+
+$ptserif: 'PT Serif', serif;
+$inter: 'Inter', sans-serif;
+$open: 'Open Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$times: 'Times New Roman', Times, serif;
+$jakarta: 'Plus Jakarta Sans', sans-serif;
+
+.Footer {
+    padding: 0 7vw !important;
+    background-color: #313539;
+
+    @media (max-width:767px) {
+        padding: 0 5vw !important;
+    }
+
+    .top {
+        display: flex;
+        padding: 7vw 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (max-width:767px) {
+            padding: 5vw 0;
+        }
+
+        .logo {
+            width: 10%;
+
+            @media (max-width:767px) {
+                width: 27%;
+            }
+
+            .img {
+                height: auto;
+                max-width: 100%;
+                min-width: 100%;
+            }
+        }
+
+        .texts {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width:767px) {
+                width: 65%;
+            }
+
+            .min-text {
+                color: white;
+            }
+
+            .line {
+                width: 100%;
+                height: 2px;
+                background-color: #FF103B;
+
+                @media (max-width:767px) {
+                    height: 1px;
+                }
+            }
+
+            .socials {
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    display: flex;
+                    color: #A6A6A6;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    align-items: center;
+                    text-decoration: none;
+                    justify-content: center;
+                    background-color: white;
+
+                    &:hover {
+                        color: #FF103B;
+                    }
+
+                    @media (max-width:767px) {
+                        width: 9vw;
+                        height: 9vw;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .links {
+            width: 11%;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width:767px) {
+                width: 30%;
+                margin-top: 6vw;
+            }
+
+            .link {
+                font-weight: 500;
+                text-decoration: none;
+                font-family: $jakarta;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .line {
+                width: 50%;
+                height: 2px;
+                background-color: #FF103B;
+
+                @media (max-width:767px) {
+                    height: 1px;
+                    width: 100%;
+                }
+            }
+
+            .min-text {
+                color: white;
+                font-weight: 400;
+                font-family: $poppins;
+            }
+        }
+
+        .c1 {
+            width: 20%;
+
+            @media (max-width:767px) {
+                width: 30%;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        padding: 1vw 0;
+        align-items: center;
+        border-top: solid 2px $text;
+        justify-content: space-between;
+
+        @media (max-width:767px) {
+            gap: 2vw;
+            padding: 3vw 0;
+            flex-direction: column;
+        }
+
+        .text {
+            color: $text;
+            font-weight: 400;
+            font-family: $poppins;
+
+            &:nth-child(2) {
+                color: $light;
+            }
+
+            @media (max-width:767px) {
+                text-align: center;
+            }
+        }
+    }
+}

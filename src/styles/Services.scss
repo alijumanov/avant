@@ -1,0 +1,96 @@
+// colors //
+
+$dark: #000000;
+$text: #898686;
+$light: #FFFFFF;
+$danger: #FF103B;
+$silver: #AAAAAA;
+$secondary: #393743;
+
+// fonts //
+
+$ptserif: 'PT Serif', serif;
+$inter: 'Inter', sans-serif;
+$open: 'Open Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$times: 'Times New Roman', Times, serif;
+$jakarta: 'Plus Jakarta Sans', sans-serif;
+
+.Services {
+    .decor {
+        top: -15vw;
+        right: 1vw;
+        width: auto;
+        height: 40vw;
+        position: absolute;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+
+            @media (max-width:767px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+
+            @media (max-width:767px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .service {
+            width: 100%;
+            display: flex;
+            padding: 2vw 4vw;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $light;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.13);
+
+            @media (max-width:767px) {
+                padding: 6vw;
+            }
+
+            .img {
+                height: auto;
+                max-width: 4vw;
+                min-width: 4vw;
+                @media (max-width:767px) {
+                    max-width: 12vw;
+                    min-width: 12vw;
+                }
+            }
+
+            .text {
+                color: $dark;
+                font-weight: 400;
+                text-align: center;
+                font-family: $ptserif;
+            }
+        }
+
+        .get-bg {
+            background: linear-gradient(180deg, #EE1037 0%, #BA102E 100%);
+
+            .text {
+                color: $light;
+            }
+        }
+    }
+}
